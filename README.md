@@ -14,7 +14,9 @@ To make things easier, make sure Python is installed on the default path you see
 
 ![image](https://user-images.githubusercontent.com/88129677/132111308-ea6f73e0-81d4-4ab5-8887-39e6aecd689b.png)
 
-In cmd, enter ```pip install openpyxl==2.6.2```. Congrats! You have all the dependencies to make this work. 
+In cmd, enter ```pip install openpyxl==2.6.2```. 
+
+If openpyxl installs with no issues, congrats! You have all the dependencies to make this work. 
 
 # To Use
 

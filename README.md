@@ -10,7 +10,7 @@ To get started, first open the command prompt from Windows search (type cmd) and
 
 Then download [Python 3](https://www.python.org/downloads/) on your computer. 
 
-To make things easier, make sure Python is installed on the default path you see in cmd so you do not have to change the directory. Python should be installed in a directory with a path similar to this:
+To make things easier, make sure Python is installed on the default path you see in cmd so you do not have to change the directory. The default path should look similar to this:
 
 ![image](https://user-images.githubusercontent.com/88129677/132111308-ea6f73e0-81d4-4ab5-8887-39e6aecd689b.png)
 

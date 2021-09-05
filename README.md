@@ -18,7 +18,7 @@ In cmd, enter ```pip install openpyxl==2.6.2```. Congrats! You have all the depe
 
 # To Use
 
-To use this script, put a POS report saved in .xlsx format, the .xlsx daily report you wish to output to, and the script main.py in the **same folder**. 
+To use this script, put a POS report saved in .xlsx format, the .xlsx daily report you wish to output to, and main.py in the **same folder**. 
 
 Once you have that set up, run the script by right clicking and selecting "Open with Python". It should open with Python by default but you can make sure by specifying. 
 

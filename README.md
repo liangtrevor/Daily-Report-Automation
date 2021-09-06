@@ -22,8 +22,6 @@ If openpyxl installs with no issues, congrats! You have all the dependencies to 
 
 To use this script, put a POS report saved in .xlsx format, the .xlsx daily report you wish to output to, and main.py in the **same folder**. 
 
-Once you have that set up, run the script by right clicking and selecting "Open with Python". It should open with Python by default but you can make sure by specifying. 
-
-![image](https://user-images.githubusercontent.com/88129677/132111433-5f182a62-287f-4f29-b317-637d44ffa614.png)
+Once you have that set up, run the script by double clicking it in the file explorer. 
 
 You will be prompted with on screen instructions. Once the program finishes executing, a copy of the daily report will appear in the folder the script was placed in. 

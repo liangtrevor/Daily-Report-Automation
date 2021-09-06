@@ -20,7 +20,9 @@ If openpyxl installs with no issues, congrats! You have all the dependencies to 
 
 # To Use
 
-To use this script, put a POS report saved in .xlsx format, the .xlsx daily report you wish to output to, and main.py in the **same folder**. 
+To use this script, put a POS report saved in .xlsx format, the .xlsx daily report with sheets named 1-7 you wish to output to, and main.py in the **same folder**. 
+
+**Version 1.2: Support for multiple report sheets added. Multiple POS report functionality coming in 1.3**.
 
 Once you have that set up, run the script by double clicking it in the file explorer. 
 

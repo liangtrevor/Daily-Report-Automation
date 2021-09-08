@@ -10,14 +10,15 @@ today = date.today()
 
 weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
-print("Hi, welcome to the automation wizard!")
-print("You will be prompted for filenames.")
+print("Hi Ange, welcome to the automation wizard!")
+print("You will be prompted for a filename")
 print("Please include the file extension at the end (e.g. .xlsx) \n")
 userResponse = input("Enter the filename of POS report: ")
 
 wb_pos = openpyxl.load_workbook(userResponse)
 
-sheet_pos = wb_pos.active
+# redundant
+# sheet_pos = wb_pos.active
 
 userResponse = input("Enter the filename of report template: ")
 
@@ -38,10 +39,20 @@ start = int(input("Enter day to start at: "))
 
 end = int(input("Enter last day: "))
 
+# for z in range(start, end + 1):
+#     date = input("Enter date (Day %d): " %z)
+#     tempHigh = input("Enter temperature high: ")
+#     precip = input("Enter precipitation: ")
+#     passthrough(pos_report=wb_pos, report=wb_report, precip=precip,
+#                 temphigh=tempHigh, passnumber=z, date=date)
+
 for z in range(start, end + 1):
-    date = input("Enter date (Day %d): " %z)
-    tempHigh = input("Enter temperature high: ")
+    # date = input("Enter date (Day %d): " %z)
+    weekday = weekdays[int(day) - (7 - z)]
+    date = str(weekday) + ", " + str(int(day) - (7 + z)) + " " + month # day of the week, day, month
+    print(date)
     precip = input("Enter precipitation: ")
+    tempHigh = input("Enter temperature high: ")
     passthrough(pos_report=wb_pos, report=wb_report, precip=precip,
                 temphigh=tempHigh, passnumber=z, date=date)
 

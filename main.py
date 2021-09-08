@@ -8,8 +8,7 @@ from functions import passthrough
 
 today = date.today()
 
-days = {'0': 'Mon', '1': 'Tue', '2': 'Wed', '3': 'Thu', '4': 'Fri',
-        '5': 'Sat', '6': 'Sun'}
+weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 print("Hi, welcome to the automation wizard!")
 print("You will be prompted for filenames.")
@@ -29,21 +28,26 @@ newFilename = userResponse + "_completed"
 
 month = today.strftime("%b")
 
+month_num = today.month
+
 day = today.strftime("%d ")
 
-userResponse = input("Enter temperature high: ")
+year = today.year
 
-tempHigh = userResponse
+start = int(input("Enter day to start at: "))
 
-userResponse = input("Enter precipitation: ")
+end = int(input("Enter last day: "))
 
-precip = userResponse
-
-for z in range(1, 8):
-
-    daywk = days[str(today.weekday() + (z - 1))]
-
-    date = str(daywk) + ", " + str(int(day) + (z - 1)) + " " + month
+for z in range(start, end + 1):
+    # if today.weekday()
+    # daywk = days[str(abs(today.weekday() - (7 - z)))]
+    week_num = date(int(year),int(month_num),int(day)).weekday()
+    weekday = weekdays[week_num - (7 - z)]
+    date = str(weekday) + ", " + str(int(day) - (7 + z)) + " " + month # day of the week, day, month
+    print("the day of week: " + str(today.weekday()))
+    print("Date: " + date)
+    tempHigh = input("Enter temperature high: ")
+    precip = input("Enter precipitation: ")
     passthrough(pos_report=wb_pos, report=wb_report, precip=precip,
                 temphigh=tempHigh, passnumber=z, date=date)
 

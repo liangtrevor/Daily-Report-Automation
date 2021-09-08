@@ -2,8 +2,6 @@
 # version 2.6.2 of OpenPyXL
 # to install: >>> pip install openpyxl==2.6.2
 
-from datetime import date
-
 # IDEA: let user select range of values to go through
 # one pass
 
@@ -93,6 +91,6 @@ def passthrough(pos_report, report, precip, temphigh, passnumber, date):
             sheet_report['C' + str(i)].value = data[value]
             # print('Addition successful!')
 
-    print("Pass " + str(passnumber) + " done!")
+    print("Pass " + str(passnumber) + " done!\n")
 
 input()

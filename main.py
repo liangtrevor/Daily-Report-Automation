@@ -39,13 +39,7 @@ start = int(input("Enter day to start at: "))
 end = int(input("Enter last day: "))
 
 for z in range(start, end + 1):
-    # if today.weekday()
-    # daywk = days[str(abs(today.weekday() - (7 - z)))]
-    week_num = date(int(year),int(month_num),int(day)).weekday()
-    weekday = weekdays[week_num - (7 - z)]
-    date = str(weekday) + ", " + str(int(day) - (7 + z)) + " " + month # day of the week, day, month
-    print("the day of week: " + str(today.weekday()))
-    print("Date: " + date)
+    date = input("Enter date (Day %d): " %z)
     tempHigh = input("Enter temperature high: ")
     precip = input("Enter precipitation: ")
     passthrough(pos_report=wb_pos, report=wb_report, precip=precip,

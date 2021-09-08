@@ -12,7 +12,10 @@ def passthrough(pos_report, report, precip, temphigh, passnumber, date):
     # POS report sheets will be merged into one workbook
     # Named 1-7
     # sheet_pos = pos_report[str(passnumber)] ** to be used
-    sheet_pos = pos_report.active
+    # sheet_pos = pos_report.active # for a single pos_report (PROTOTYPING)
+
+    sheet_pos = pos_report[str(passnumber)] # name pos_report/report sheets
+                                            # the proper day of month
     sheet_report = report[str(passnumber)]
 
     pos_reportData = {'Gift Total': None, 'Food  (Department)': None,

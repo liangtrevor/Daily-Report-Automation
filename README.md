@@ -20,10 +20,12 @@ If openpyxl installs with no issues, congrats! You have all the dependencies to 
 
 # To Use
 
-To use this script, put a POS report saved in .xlsx format, the .xlsx daily report with sheets named 1-7 you wish to output to, main.py and functions.py in the **same folder**. 
+To use this script, put a POS report saved in .xlsx format, the .xlsx daily report with sheets you wish to output to, main.py and functions.py in the **same folder**. 
 
-**Version 1.2: Support for multiple report sheets added. Multiple POS report functionality coming in 1.3**.
+To set up the sheets, download POS reports in .xlsx format and put the individual sheets into a single Excel workbook. Name the sheets according to their **day of the month**, and do the same for the daily report sheets.
 
-Once you have that set up, run the script by double clicking it in the file explorer. 
+Once you have that set up, run the script by double-clicking it in the file explorer. 
 
-You will be prompted with on screen instructions. Once the program finishes executing, a copy of the daily report will appear in the folder the script was placed in. 
+You will be prompted with on screen instructions. Once the program finishes executing, a copy of the daily report will appear in the folder the script was placed in.
+
+The script handles dates using today's date as the non-inclusive end. So if today is Thur, 9 Sep, and you give the start day as 1, end day as 4, the start day will be Mon, 6 Sep and the end day will be Wed, 8 Sep.

@@ -39,10 +39,15 @@ start = int(input("Enter day to start at: "))
 
 end = int(input("Enter last day: "))
 
-for z in range(start, end + 1):
-    weekday = weekdays[int(day) - (7 - z)]
-    date = str(weekday) + ", " + str(int(day) - (7 + z)) + " " + month # day of the week, day, month
+dayofweek = today.weekday()
+
+startDate = (end - (end - start))
+
+for z in range(start, end):
+    weekday = weekdays[int(dayofweek) - (end - z)]
+    date = str(weekday) + ", " + str(int(day) - (end - z)) + " " + month # day of the week, day, month
     print(date)
+    startDate += 1
     precip = input("Enter precipitation: ")
     tempHigh = input("Enter temperature high: ")
     passthrough(pos_report=wb_pos, report=wb_report, precip=precip,
@@ -51,3 +56,5 @@ for z in range(start, end + 1):
 wb_report.save("report_completed.xlsx")
 
 input()
+
+print("Hi")

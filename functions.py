@@ -1,9 +1,5 @@
-# compartmentalize main - generalization
 # version 2.6.2 of OpenPyXL
 # to install: >>> pip install openpyxl==2.6.2
-
-# IDEA: let user select range of values to go through
-# one pass
 
 def passthrough(pos_report, report, precip, temphigh, passnumber, date):
     print("\nStarting pass " + str(passnumber) + " ... ")

@@ -1,6 +1,6 @@
 # Daily-Report-Automation
 
-The purpose of this script is to automatically move data from a GenLive POS report into a formatted .xlsx report. 
+This script automatically moves data from a GenLive POS report into a formatted .xlsx report, with some user setup and input. 
 
 # Getting Started
 

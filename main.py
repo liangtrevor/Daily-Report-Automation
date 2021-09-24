@@ -21,9 +21,6 @@ userResponse = input("Enter the filename of report template: ")
 
 wb_report = openpyxl.load_workbook(userResponse)
 
-# filename for saving new sheet at the end
-newFilename = userResponse + "_completed"
-
 month = today.strftime("%b")
 
 month_num = today.month
@@ -34,15 +31,19 @@ year = today.year
 
 start = int(input("Enter day to start at: "))
 
-end = int(input("Enter last day (excluded): "))
+end = int(input("Enter last day: "))
 
 dayofweek = today.weekday()
 
 startDate = (end - (end - start))
 
+ogDate = str(weekdays[int(dayofweek) - (end - start)]) + ", " + str(int(day) -
+    (end - start)) + " " + month
+
 for z in range(start, end):
     weekday = weekdays[int(dayofweek) - (end - z)]
-    date = str(weekday) + ", " + str(int(day) - (end - z)) + " " + month # day of the week, day, month
+    # day of the week, day, month
+    date = str(weekday) + ", " + str(int(day) - (end - z)) + " " + month
     print(date)
     startDate += 1
     precip = input("Enter precipitation: ")
@@ -52,6 +53,6 @@ for z in range(start, end):
 
 wb_report.save("report_completed.xlsx")
 
-print("All sheets up to " + date + " populated.")
+print("Sheets from " + ogDate + " to " + date + " populated.")
 
 input()

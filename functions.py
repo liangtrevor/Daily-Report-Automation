@@ -29,7 +29,8 @@ def passthrough(pos_report, report, precip, temphigh, passnumber, date):
                       'Units  (Sub Department)': None,
                       'Rentals  (Department)': None,
                       'Lessons  (Department)': None,
-                      'Range  (Department)': None}
+                      'Range  (Department)': None,
+                      'Headwear  (Sub Department)': None}
 
     # populate pos_reportData dict w/ department values
     for i in range(8, sheet_pos.max_row):
@@ -75,6 +76,7 @@ def passthrough(pos_report, report, precip, temphigh, passnumber, date):
             'MEMBERSHIPS': pos_reportData['Rewards Club  (Sub Department)'],
             'RANGE TOKENS': pos_reportData['Units  (Sub Department)'],
             'RENTALS': pos_reportData['Rentals  (Department)'],
+            'HEADWEAR': pos_reportData['Headwear  (Sub Department)'],
             "LAST YEAR'S DATE": date, 'TEMPERATURE HIGH': temphigh,
             'PRECIPITATION': precip}
 
@@ -95,5 +97,3 @@ def passthrough(pos_report, report, precip, temphigh, passnumber, date):
             # print('Addition successful!')
 
     print("Pass " + str(passnumber) + " done!\n")
-
-input()

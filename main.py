@@ -17,9 +17,6 @@ userResponse = input("Enter the filename of POS report: ")
 
 wb_pos = openpyxl.load_workbook(userResponse)
 
-# redundant
-# sheet_pos = wb_pos.active
-
 userResponse = input("Enter the filename of report template: ")
 
 wb_report = openpyxl.load_workbook(userResponse)
@@ -37,7 +34,7 @@ year = today.year
 
 start = int(input("Enter day to start at: "))
 
-end = int(input("Enter last day: "))
+end = int(input("Enter last day (excluded): "))
 
 dayofweek = today.weekday()
 
@@ -55,6 +52,6 @@ for z in range(start, end):
 
 wb_report.save("report_completed.xlsx")
 
-input()
+print("All sheets up to " + date + " populated.")
 
-print("Hi")
+input()
